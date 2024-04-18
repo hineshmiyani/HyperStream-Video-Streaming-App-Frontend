@@ -4,5 +4,7 @@
   "trailingComma": "es5",
   "printWidth": 100,
   "bracketSpacing": true,
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["clsx", "cva", "tw"]
 }
