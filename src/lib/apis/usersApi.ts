@@ -1,10 +1,18 @@
+import qs from 'query-string'
+
 import api from '@/lib/axios'
 import {
   LoginSchemaType,
   ResetPasswordSchemaType,
   SignUpSchemaType,
 } from '@/lib/validators/userSchema'
-import { User, UserLoginResponse, UserResponse, UserSignUpResponse } from '@/types/userTypes'
+import {
+  User,
+  UserLoginResponse,
+  UserResponse,
+  UserSignUpResponse,
+  UsersResponse,
+} from '@/types/userTypes'
 
 const signUpUser = (payload: SignUpSchemaType): Promise<UserSignUpResponse> => {
   return api.post('/users/signup', payload)
@@ -26,6 +34,15 @@ const getCurrentUser = (): Promise<UserResponse> => {
   return api.get('/users/current-user')
 }
 
+const getAllUsers = (currentUserId: string): Promise<UsersResponse> => {
+  const url = qs.stringifyUrl({
+    url: '/users/all-users',
+    query: { ...(currentUserId ? { currentUserId } : {}) },
+  })
+
+  return api.get(url)
+}
+
 const logoutUser = (): Promise<TApiResponse> => {
   return api.post('/users/logout')
 }
@@ -39,6 +56,7 @@ const resetPassword = (payload: ResetPasswordSchemaType): Promise<TApiResponse> 
 }
 
 export {
+  getAllUsers,
   getCurrentUser,
   loginUser,
   logoutUser,

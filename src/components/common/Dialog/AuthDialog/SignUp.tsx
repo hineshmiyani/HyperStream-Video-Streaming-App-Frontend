@@ -21,11 +21,11 @@ import { useMutationFactory } from '@/hooks/react-query'
 import { signUpUser } from '@/lib/apis/usersApi'
 import { SignUpSchemaType, signUpSchema } from '@/lib/validators/userSchema'
 
-type Props = {
+type SignUpProps = {
   setIsSignUpSuccessful: Dispatch<SetStateAction<boolean>>
 }
 
-const SignUp = ({ setIsSignUpSuccessful }: Props) => {
+const SignUp = ({ setIsSignUpSuccessful }: SignUpProps) => {
   const [isShowPassword, setIsShowPassword] = useState({
     password: false,
     confirmPassword: false,

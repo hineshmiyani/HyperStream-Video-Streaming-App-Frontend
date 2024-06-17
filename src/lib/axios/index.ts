@@ -30,6 +30,8 @@ api.interceptors.response.use(
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
     const { data } = error.response
+
+    console.log(error.toJSON())
     return Promise.reject(data)
   }
 )

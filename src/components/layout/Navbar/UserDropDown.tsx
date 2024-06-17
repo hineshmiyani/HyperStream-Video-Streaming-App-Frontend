@@ -15,11 +15,11 @@ import { logoutUser } from '@/lib/apis/usersApi'
 import { clearLocalStorage } from '@/lib/utils/storage'
 import { User } from '@/types/userTypes'
 
-type Props = {
+type UserDropDownProps = {
   user: User
 }
 
-const UserDropDown = ({ user }: Props) => {
+const UserDropDown = ({ user }: UserDropDownProps) => {
   const { mutate } = useMutationFactory({
     mutationFn: logoutUser,
     onSuccess: () => {

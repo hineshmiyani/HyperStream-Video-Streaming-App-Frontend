@@ -21,12 +21,12 @@ import { loginUser } from '@/lib/apis/usersApi'
 import { addToLocalStorage } from '@/lib/utils/storage'
 import { LoginSchemaType, loginSchema } from '@/lib/validators/userSchema'
 
-type Props = {
+type LoginProps = {
   setIsDialogOpen: Dispatch<SetStateAction<boolean>>
   setIsShowForgotPassword: Dispatch<SetStateAction<boolean>>
 }
 
-const Login = ({ setIsDialogOpen, setIsShowForgotPassword }: Props) => {
+const Login = ({ setIsDialogOpen, setIsShowForgotPassword }: LoginProps) => {
   const router = useRouter()
 
   const [isShowPassword, setIsShowPassword] = useState(false)

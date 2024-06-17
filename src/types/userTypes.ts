@@ -26,6 +26,10 @@ export type UserResponse = TApiResponse & {
   data: User
 }
 
+export type UsersResponse = TApiResponse & {
+  data: User[]
+}
+
 export type UserSignUpResponse = TApiResponse & {
   data: Pick<User, 'id' | 'username' | 'email'>
 }

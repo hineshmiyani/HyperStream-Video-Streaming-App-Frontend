@@ -15,12 +15,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import ENV from '@/env'
 import { AuthDialogTabs } from '@/types/authTypes'
 
-type Props = {
+type AuthDialogProps = {
   children: React.ReactNode
   defaultTab: AuthDialogTabs
 }
 
-const AuthDialog = ({ children, defaultTab }: Props) => {
+const AuthDialog = ({ children, defaultTab }: AuthDialogProps) => {
   const [isSignUpSuccessful, setIsSignUpSuccessful] = useState(false)
   const [isShowForgotPassword, setIsShowForgotPassword] = useState(false)
 
