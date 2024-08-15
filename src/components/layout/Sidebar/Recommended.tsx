@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import React from 'react'
 
 import UserItem, { UserItemSkeleton } from '@/components/layout/Sidebar/UserItem'
-import { getAllUsers } from '@/lib/apis/usersApi'
+import { getRecommendUsers } from '@/lib/apis/usersApis'
 import { isCollapsed } from '@/lib/redux/features/sidebar/sidebarSlice'
 import { useAppSelector } from '@/lib/redux/hooks'
 import { getFromLocalStorage } from '@/lib/utils/storage'
@@ -20,8 +20,8 @@ const Recommended = () => {
   })
 
   const { data: recommendedUsers, isFetching } = useQuery({
-    queryKey: ['users', currentUser?.id],
-    queryFn: () => getAllUsers(currentUser?.id || ''),
+    queryKey: ['recommendedUsers', currentUser?.id],
+    queryFn: () => getRecommendUsers(currentUser?.id || ''),
     select: (data) => data?.data,
   })
 

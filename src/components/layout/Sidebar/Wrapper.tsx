@@ -1,5 +1,6 @@
 'use client'
 
+import { FollowingSkeleton } from '@/components/layout/Sidebar/Following'
 import { RecommendedSkeleton } from '@/components/layout/Sidebar/Recommended'
 import { ToggleSkeleton } from '@/components/layout/Sidebar/Toggle'
 import useIsClient from '@/hooks/common/useIsClient'
@@ -20,6 +21,7 @@ const Wrapper = ({ children }: WrapperProps) => {
     return (
       <aside className="fixed left-0 z-50 flex h-full w-16 flex-col bg-background transition-all duration-200 ease-in-out lg:w-60">
         <ToggleSkeleton />
+        <FollowingSkeleton />
         <RecommendedSkeleton />
       </aside>
     )
