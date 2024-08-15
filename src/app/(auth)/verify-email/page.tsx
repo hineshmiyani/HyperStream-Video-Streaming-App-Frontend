@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { useLayoutEffect } from 'react'
 
 import { useMutationFactory } from '@/hooks/react-query'
-import { verifyEmail } from '@/lib/apis/usersApi'
+import { verifyEmail } from '@/lib/apis/usersApis'
 import { addToLocalStorage } from '@/lib/utils/storage'
 
 const VerifyEmail = () => {

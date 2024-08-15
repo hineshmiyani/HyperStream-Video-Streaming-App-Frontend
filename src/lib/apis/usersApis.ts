@@ -34,9 +34,13 @@ const getCurrentUser = (): Promise<UserResponse> => {
   return api.get('/users/current-user')
 }
 
-const getAllUsers = (currentUserId: string): Promise<UsersResponse> => {
+const getUserByUsername = (username: string): Promise<UserResponse> => {
+  return api.get(`/users/u/username/${username}`)
+}
+
+const getRecommendUsers = (currentUserId: string): Promise<UsersResponse> => {
   const url = qs.stringifyUrl({
-    url: '/users/all-users',
+    url: '/users/recommend-users',
     query: { ...(currentUserId ? { currentUserId } : {}) },
   })
 
@@ -56,8 +60,9 @@ const resetPassword = (payload: ResetPasswordSchemaType): Promise<TApiResponse> 
 }
 
 export {
-  getAllUsers,
   getCurrentUser,
+  getRecommendUsers,
+  getUserByUsername,
   loginUser,
   logoutUser,
   resendVerificationEmail,

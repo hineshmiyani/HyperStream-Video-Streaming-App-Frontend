@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useMutationFactory } from '@/hooks/react-query'
-import { signUpUser } from '@/lib/apis/usersApi'
+import { signUpUser } from '@/lib/apis/usersApis'
 import { SignUpSchemaType, signUpSchema } from '@/lib/validators/userSchema'
 
 type SignUpProps = {

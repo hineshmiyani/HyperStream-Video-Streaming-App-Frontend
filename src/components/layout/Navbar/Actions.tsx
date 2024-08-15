@@ -6,7 +6,7 @@ import React from 'react'
 import AuthDialog from '@/components/common/Dialog/AuthDialog'
 import UserDropDown from '@/components/layout/Navbar/UserDropDown'
 import { Button } from '@/components/ui/button'
-import { getCurrentUser } from '@/lib/apis/usersApi'
+import { getCurrentUser } from '@/lib/apis/usersApis'
 import { getFromLocalStorage } from '@/lib/utils/storage'
 import { AuthDialogTabs } from '@/types/authTypes'
 

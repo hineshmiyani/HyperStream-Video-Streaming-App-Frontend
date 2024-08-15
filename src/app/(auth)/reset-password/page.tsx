@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useMutationFactory } from '@/hooks/react-query'
-import { resetPassword } from '@/lib/apis/usersApi'
+import { resetPassword } from '@/lib/apis/usersApis'
 import { ResetPasswordSchemaType, resetPasswordSchema } from '@/lib/validators/userSchema'
 
 const ResetPassword = () => {

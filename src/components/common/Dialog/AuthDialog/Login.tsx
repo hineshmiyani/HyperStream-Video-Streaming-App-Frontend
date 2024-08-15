@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useMutationFactory } from '@/hooks/react-query'
-import { loginUser } from '@/lib/apis/usersApi'
+import { loginUser } from '@/lib/apis/usersApis'
 import { addToLocalStorage } from '@/lib/utils/storage'
 import { LoginSchemaType, loginSchema } from '@/lib/validators/userSchema'
 

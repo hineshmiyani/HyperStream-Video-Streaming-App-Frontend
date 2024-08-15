@@ -4,7 +4,7 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import { DialogTitle } from '@/components/ui/dialog'
 import { useMutationFactory } from '@/hooks/react-query'
-import { resendVerificationEmail } from '@/lib/apis/usersApi'
+import { resendVerificationEmail } from '@/lib/apis/usersApis'
 import { UserSignUpResponse } from '@/types/userTypes'
 
 const VerifyEmail = () => {

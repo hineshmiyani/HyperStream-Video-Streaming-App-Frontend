@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useMutationFactory } from '@/hooks/react-query'
-import { sendPasswordRecoveryEmail } from '@/lib/apis/usersApi'
+import { sendPasswordRecoveryEmail } from '@/lib/apis/usersApis'
 import { EmailSchemaType, emailSchema } from '@/lib/validators/userSchema'
 
 const ForgotPassword = () => {
