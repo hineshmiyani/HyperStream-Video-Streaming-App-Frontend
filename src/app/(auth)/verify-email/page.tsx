@@ -5,6 +5,7 @@ import { useLayoutEffect } from 'react'
 
 import { useMutationFactory } from '@/hooks/react-query'
 import { verifyEmail } from '@/lib/apis/usersApis'
+import { PagePath } from '@/lib/constants'
 import { addToLocalStorage } from '@/lib/utils/storage'
 
 const VerifyEmail = () => {
@@ -32,7 +33,7 @@ const VerifyEmail = () => {
     ;(async () => {
       await mutation.mutateAsync()
       setTimeout(() => {
-        router.replace('/')
+        router.replace(PagePath.HOME)
       }, 1500)
     })()
   }, [accessToken, refreshToken])

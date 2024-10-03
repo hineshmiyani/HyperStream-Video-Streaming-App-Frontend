@@ -20,6 +20,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { useMutationFactory } from '@/hooks/react-query'
 import { resetPassword } from '@/lib/apis/usersApis'
+import { PagePath } from '@/lib/constants'
 import { ResetPasswordSchemaType, resetPasswordSchema } from '@/lib/validators/userSchema'
 
 const ResetPassword = () => {
@@ -53,7 +54,7 @@ const ResetPassword = () => {
     await mutateAsync(values)
 
     setTimeout(() => {
-      router.replace('/')
+      router.replace(PagePath.HOME)
     }, 1500)
   }
 
