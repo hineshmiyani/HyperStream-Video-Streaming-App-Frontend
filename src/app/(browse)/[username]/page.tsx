@@ -9,15 +9,16 @@ type UserPageProps = {
 }
 
 const UserPage = async ({ params }: UserPageProps) => {
-  const user = (await getUserByUsername(params?.username))?.data || {}
+  const otherUser = (await getUserByUsername(params?.username))?.data || {}
 
-  const { isUserAlreadyFollowing } = (await getIsUserAlreadyFollowing(user?.id))?.data || {}
+  const { isUserAlreadyFollowing } = (await getIsUserAlreadyFollowing(otherUser?.id))?.data || {}
 
   return (
-    <div>
-      <p>UserPage {params?.username}</p>
+    <div className="flex flex-col gap-y-4">
+      <p>username: {params?.username}</p>
+      <p>userId: {otherUser?.id}</p>
 
-      <Actions user={user} isUserAlreadyFollowing={isUserAlreadyFollowing} />
+      <Actions otherUser={otherUser} isUserAlreadyFollowing={isUserAlreadyFollowing} />
     </div>
   )
 }

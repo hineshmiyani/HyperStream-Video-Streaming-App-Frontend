@@ -1,4 +1,4 @@
-import { idSchema } from '@/lib/validators/common.schema'
+import { idSchema } from '@/lib/validators/commonSchema'
 import { z } from 'zod'
 
 const followSchema = z.object({

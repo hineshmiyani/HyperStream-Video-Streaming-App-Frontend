@@ -1,6 +1,6 @@
 'use client'
 
-import { useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 
 import useMediaQuery from '@/hooks/common/useMediaQuery'
 import { isCollapsed, onCollapse, onExpand } from '@/lib/redux/features/sidebar/sidebarSlice'
@@ -17,7 +17,7 @@ const Container = ({ children }: ContainerProps) => {
   const isSidebarCollapsed = useAppSelector(isCollapsed)
   const dispatch = useAppDispatch()
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (isDesktopScreen) {
       dispatch(onExpand())
     } else {
