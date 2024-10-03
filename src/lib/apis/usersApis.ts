@@ -34,6 +34,10 @@ const getCurrentUser = (): Promise<UserResponse> => {
   return api.get('/users/current-user')
 }
 
+const getCurrentUserByUsername = (username: string): Promise<UserResponse> => {
+  return api.get(`/users/current-user/${username}`)
+}
+
 const getUserByUsername = (username: string): Promise<UserResponse> => {
   return api.get(`/users/u/username/${username}`)
 }
@@ -61,6 +65,7 @@ const resetPassword = (payload: ResetPasswordSchemaType): Promise<TApiResponse> 
 
 export {
   getCurrentUser,
+  getCurrentUserByUsername,
   getRecommendUsers,
   getUserByUsername,
   loginUser,
