@@ -29,11 +29,11 @@ const Actions = () => {
   // cause a hydration error. Instead, we render a skeleton so that the user knows that
   // something is loading.
   if (!isClient) {
-    return <Skeleton className="h-10" />
+    return <Skeleton className="ml-auto h-10 w-10 rounded-full" />
   }
 
   if (isFetching) {
-    return <div>Loading...</div>
+    return <Skeleton className="ml-auto h-10 w-10 rounded-full" />
   }
 
   if (data) {

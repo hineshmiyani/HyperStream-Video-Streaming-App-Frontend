@@ -45,7 +45,7 @@ const Recommended = () => {
             key={user?.id}
             username={user?.username}
             imageUrl={user?.avatar || ''}
-            isLive={false}
+            isLive={user?.stream?.isLive}
           />
         ))}
       </div>

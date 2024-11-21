@@ -1,3 +1,5 @@
+import { Stream } from '@/types/streamTypes'
+
 export type User = {
   id: string
   username: string
@@ -9,6 +11,7 @@ export type User = {
   googleId: string | null
   facebookId: string | null
   authProviders: ('GOOGLE' | 'FACEBOOK' | 'JWT')[]
+  stream: Stream | null
   isEmailVerified: boolean
   createdAt: Date
   updatedAt: Date

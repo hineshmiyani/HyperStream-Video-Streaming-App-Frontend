@@ -9,4 +9,8 @@ const updateStream = (payload: Partial<Stream>): Promise<StreamResponse> => {
   return api.put(`/streams/update-stream`, payload)
 }
 
-export { getStreamByUserId, updateStream }
+const generateStreamConnection = (): Promise<StreamResponse> => {
+  return api.put(`/streams/generate-stream-connection`)
+}
+
+export { generateStreamConnection, getStreamByUserId, updateStream }

@@ -59,7 +59,8 @@ const Following = () => {
               <UserItem
                 key={follow?.following?.id}
                 username={follow?.following?.username}
-                imageUrl={follow?.following.avatar || ''}
+                imageUrl={follow?.following?.avatar || ''}
+                isLive={follow?.following?.stream?.isLive}
               />
             ))}
           </div>
